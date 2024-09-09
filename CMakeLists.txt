@@ -3,7 +3,7 @@ project(Accordion)
 
 set(CMAKE_CXX_STANDARD 20)
 SET(CMAKE_CXX_FLAGS -pthread)
-
+SET(CMAKE_CXX_FLAGS "-fno-stack-protector")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
 find_program(CCACHE_FOUND ccache)
