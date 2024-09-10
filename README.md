@@ -205,10 +205,97 @@ bash run.sh
 
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI2.png)
 
-* Click the `Control` button to enter the query control panel, you can adjust the query stage parallelism and task parallelism.
+* Click the `Controller` button to enter the query control panel, you can adjust the query stage parallelism and task parallelism.
 
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI3.png)
 
 * Click the `Complete` button to get the results of the query execution. 
 
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI4.png)  
+
+
+# Deploying Accordion on the cloud (or in a distributed environment)
+
+```
+cd accordion/
+```
+**1. Configure the Accordion.**
+* Modify the `httpconfig.config` file.
+Change all IP addresses in the file to the host IP address. Here is an example.
+
+```
+{
+    "coordinator":{
+        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_Port":"9080",
+        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_Port":"9081"
+    },
+    "local":{
+        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_Port":"9080",
+        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_Port":"9081"
+    },
+    "nic":"ens33",
+    "HttpServerAddress":"192.168.226.137:9080"
+}
+```
+* Add workers.
+```
+echo "192.168.226.137" > sbin/slaves
+```
+* Config the workers' user and password
+```
+echo -e "root\nroot" >  userpasswd
+```
+
+**2. Import TPC-H dataSet.**
+
+* Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
+* Generate TPC-H tables (`CSV format`) and copy them to `accordion/dataSet/`. Below is an example.
+```
+$cd dataSet
+$ls
+customer.tbl  makeDFS.sh       PartitionsMaker.sh  scpFile.sh
+DFSMaker      nation.tbl       partsupp.tbl        supplier.tbl
+DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
+lineitem.tbl  partitionsMaker  region.tbl
+
+```
+* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. Since we are running Accordion on a single machine, there is only 1 storage node. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
+```
+nation,1,1
+supplier,1,1
+region,1,1
+part,1,1
+partsupp,1,1
+customer,1,1
+orders,1,4
+lineitem,1,4
+```
+* Generate the `DataFileDicts`. This file contains information about the storage configuration, schema, etc. for each table.
+```
+bash PartitionsMaker.sh
+```
+
+* Overwrite the DataFileDict file in the accordion directory.
+```
+cp DataFileDicts.out ../DataFileDicts
+```
+
+* Generate partitions for each table.
+```
+$bash DFSMaker.sh
+$ls
+customer.tbl       lineitem.tbl_1  orders.tbl_0        partsupp.tbl
+DataFileDicts.out  lineitem.tbl_2  orders.tbl_1        part.tbl
+DFSMaker           lineitem.tbl_3  orders.tbl_2        region.tbl
+DFSMaker.sh        makeDFS.sh      orders.tbl_3        scpFile.sh
+lineitem.tbl       nation.tbl      partitionsMaker     supplier.tbl
+lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
+```
+* Move these partitions to `accordion/data/`
+```
+bash makeDFS.sh
+```
