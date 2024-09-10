@@ -64,14 +64,35 @@ target_link_libraries(
 )
 ```
 
-
+3.Build Accordion
 ```
 cd Accordion_cpp/
 mkdir build
 cd build
 cmake ..
 make -j6
+```
 
+4.Build Accordion tools.
+```
+cd accordion_tools/DFSMaker
+mkdir build && cd build
+cmake .. && make -j6
+cp DFSMaker ../../../accordion/dataSet/
+
+cd accordion_tools/partitionsMaker
+mkdir build && cd build
+cmake .. && make -j6
+cp partitionsMaker ../../../accordion/dataSet/
+
+cd accordion_tools/httpConfigIpUpdater
+mkdir build && cd build
+cmake .. && make -j6
+cp httpConfigIpUpdater ../../../accordion/sbin/
+```
+
+5.Copy Accordion execution file to  `Accordion_cpp/accordion/` and mv `Accordion_cpp/accordion/` to the home directory.
+```
 cp Accordion ../accordion/
 cp -r ../accordion/ ~/
 cd ~/accordion/
