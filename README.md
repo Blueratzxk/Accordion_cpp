@@ -33,7 +33,7 @@ Accordion has the following third party dependencies
 
 
 # Building from source
-
+After installing all the dependent libraries, it is needed to modify the `CMakeLists.txt` to allow CMAKE to find all the header files and dynamic link libraries.
 ```
 include_directories(
         "/home/zxk/open-codes/json/include/"
