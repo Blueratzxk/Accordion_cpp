@@ -216,9 +216,10 @@ bash run.sh
 
 # Deploying Accordion on the cloud (or in a distributed environment)
 
-```
-cd accordion/
-```
+Suppose there are 5 nodes, 192.168.0.1,192.168.0.2,192.168.0.3,192.168.0.4,192.168.0.5.
+
+Where, 192.168.0.1 is coordinator. And 192.168.0.2, 192.168.0.3, 192.168.0.4, and 192.168.0.5 are workers. Inside the workers, 192.168.0.2 and 192.168.0.3 are storage nodes and 192.168.0.4 and 192.168.0.5 are compute nodes.
+
 **1. Configure the Accordion.**
 * Modify the `httpconfig.config` file.
 Change all IP addresses in the file to the host IP address. Here is an example.
