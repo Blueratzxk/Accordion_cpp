@@ -221,7 +221,7 @@ Suppose there are 5 nodes, `192.168.0.121`, `192.168.0.122`, `192.168.0.123`, `1
 Where, `192.168.0.121` is coordinator. And `192.168.0.122, 192.168.0.123, 192.168.0.124, and 192.168.0.125` are workers. Inside the workers, `192.168.0.122 and 192.168.0.123` are storage nodes and `192.168.0.124 and 192.168.0.125` are compute nodes.
 
 **1. Configure a distributed Accordion.**
-* Copy the `accordion/` directory to the `XXX@192.168.0.121:~/` (`accordion/` must be in the home directory).
+* Copy the `accordion/` directory to the `XXX@192.168.0.121:~/` (The `accordion/` must be copied to a home directory).
 * Modify the `httpconfig.config` file.
 Change all IP addresses in the file to the host IP address.
 ```
