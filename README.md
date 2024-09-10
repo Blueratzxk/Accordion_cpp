@@ -107,8 +107,11 @@ bash run.sh
 
 # Running Accordion stand-alone
 
-**1. Modify the `httpconfig.config` file.**
-
+```
+cd accordion/
+```
+**1. Configure the Accordion.**
+* Modify the `httpconfig.config` file.
 Change all IP addresses in the file to the host IP address. Here is an example.
 
 ```
@@ -128,6 +131,14 @@ Change all IP addresses in the file to the host IP address. Here is an example.
     "nic":"ens33",
     "HttpServerAddress":"192.168.226.129:9080"
 }
+```
+* Add workers.
+```
+echo "192.168.226.129" > sbin/slaves
+```
+* Config the workers' user and password
+```
+echo -e "root\nroot" >  userpasswd
 ```
 
 **2. Import TPC-H dataSet.**
@@ -154,7 +165,7 @@ customer,1,1
 orders,1,4
 lineitem,1,4
 ```
-* Generate the DataFileDicts. This file contains information about the storage configuration, schema, etc. for each table.
+* Generate the `DataFileDicts`. This file contains information about the storage configuration, schema, etc. for each table.
 ```
 bash PartitionsMaker.sh
 ```
@@ -163,3 +174,9 @@ bash PartitionsMaker.sh
 ```
 cp DataFileDicts.out ../DataFileDicts
 ```
+
+* Generate partitions for each table.
+```
+bash DFSMaker.sh
+```
+
