@@ -107,8 +107,10 @@ bash run.sh
 
 # Running Accordion stand-alone
 
-**1.Modify the httpconfig.config file**
-Change all IP addresses in the file to the host IP address.
+**1. Modify the httpconfig.config file**
+
+Change all IP addresses in the file to the host IP address. Here is an example.
+
 ```
 {
     "coordinator":{
