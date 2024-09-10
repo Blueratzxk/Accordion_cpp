@@ -1,6 +1,6 @@
 # Accordion
 
-The first IQRE SQL query engine.
+The first IQRE(Intra-Query Runtime Elasticity) SQL query engine (Prototype).
 
 # Prerequisites
 
