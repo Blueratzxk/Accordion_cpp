@@ -42,7 +42,7 @@ cd Accordion_cpp/
 
 2. Install all the dependencies.
 
-After installing all the dependent libraries, it is needed to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries. Here is an example.
+After installing all the dependent libraries, it is needed to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries (according to the locations of installed dependencies). Here is an example.
 ```
 include_directories(
         "/home/zxk/dependency/json/include/"
