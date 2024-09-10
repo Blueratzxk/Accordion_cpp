@@ -31,7 +31,34 @@ Accordion has the following third party dependencies
 * [@spdlog](https://github.com/gabime/spdlog) : Log library.
 
 
+
 # Building from source
+
+```
+include_directories(
+        "/home/zxk/open-codes/json/include/"
+        "/usr/local/include/"
+        "/usr/local/include/restclient-cpp"
+        "/home/zxk/.local/include"
+        "/home/zxk/open-codes/oneapi-tbb-2021.9.0/include"
+
+)
+
+target_link_libraries(
+        Accordion
+        pistache
+        /usr/local/lib64/libpistache.so
+        /usr/local/lib/librestclient-cpp.so
+        curl
+        arrow
+        arrow_acero
+        arrow_flight
+        gandiva
+        /home/zxk/open-codes/oneapi-tbb-2021.9.0/lib/intel64/gcc4.8/libtbb.so
+)
+```
+
+
 ```
 cd Accordion_cpp/
 mkdir build
