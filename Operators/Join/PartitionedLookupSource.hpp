@@ -7,7 +7,7 @@
 
 #include "LookupSource.hpp"
 #include "TrackingLookupSourceSupplier.hpp"
-#include "../Execution/Buffer/OutputPartitioningBuffer/BufferShuffler/SimplePageHashGenerator.hpp"
+#include "../../Execution/Buffer/OutputPartitioningBuffer/BufferShuffler/SimplePageHashGenerator.hpp"
 class PatitionedLookupSourceSupplier;
 
 class PartitionedLookupSource : public LookupSource

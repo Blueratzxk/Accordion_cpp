@@ -9,7 +9,7 @@
 using namespace std;
 #include <atomic>
 #include <spdlog/spdlog.h>
-#include <../Utils/TextColor.h>
+#include "../Utils/TextColor.h"
 
 
 class ClusterNode

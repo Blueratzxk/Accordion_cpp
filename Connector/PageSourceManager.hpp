@@ -23,7 +23,7 @@ public:
 
     void addConnectorPageSourceProvider(ConnectorId connectorId,std::shared_ptr<ConnectorPageSourceProvider> provider)
     {
-        tbb::concurrent_hash_map<ConnectorId,std::shared_ptr<ConnectorPageSourceProvider>>::value_type hashMapValuePair(connectorId,provider);
+        tbb::concurrent_hash_map<ConnectorId,std::shared_ptr<ConnectorPageSourceProvider>,ConnectorId::compare>::value_type hashMapValuePair(connectorId,provider);
         this->pageSourceProviders.insert(hashMapValuePair);
     }
     void removeConnectorPageSourceProvider(ConnectorId connectorId)

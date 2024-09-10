@@ -23,7 +23,7 @@
 #include "../../Utils/Random.hpp"
 #include "../QueryInterface.hpp"
 #include "../ClusterInterface.hpp"
-#include "../Shell/Shell.hpp"
+#include "../../Shell/Shell.hpp"
 
 using namespace std;
 using namespace Pistache;

@@ -18,8 +18,8 @@ using namespace std;
 #include "TaskThroughputInfo.h"
 #include "../../../Session/RuntimeConfigParser.hpp"
 #include "../TasksRuntimeStats.hpp"
-#include "../Execution/Buffer/BufferInfoDescriptor.hpp"
-#include "../Execution/Task/TaskInfos/JoinInfoDescriptor.hpp"
+#include "../../../Execution/Buffer/BufferInfoDescriptor.hpp"
+#include "../../../Execution/Task/TaskInfos/JoinInfoDescriptor.hpp"
 class PipelineContext;
 class QueryContext;
 class OutputBuffer;

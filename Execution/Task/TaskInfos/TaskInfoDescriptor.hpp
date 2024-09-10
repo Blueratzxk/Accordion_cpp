@@ -7,10 +7,10 @@
 
 #include "PipelineDescriptor.hpp"
 #include "../Context/TaskContext.h"
-#include "../System/TaskServer.h"
-#include "../Execution/Task/Statistics/CPU/TaskCpuUsageDescriptor.hpp"
-#include "../Execution/Buffer/BufferInfoDescriptor.hpp"
-#include "../Execution/Task/TaskInfos/JoinInfoDescriptor.hpp"
+#include "../../../System/TaskServer.h"
+#include "../../../Execution/Task/Statistics/CPU/TaskCpuUsageDescriptor.hpp"
+#include "../../../Execution/Buffer/BufferInfoDescriptor.hpp"
+#include "../../../Execution/Task/TaskInfos/JoinInfoDescriptor.hpp"
 class TaskInfoDescriptor
 {
     string taskId;
