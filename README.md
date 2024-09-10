@@ -177,6 +177,16 @@ cp DataFileDicts.out ../DataFileDicts
 
 * Generate partitions for each table.
 ```
-bash DFSMaker.sh
+$bash DFSMaker.sh
+$ls
+customer.tbl       lineitem.tbl_1  orders.tbl_0        partsupp.tbl
+DataFileDicts.out  lineitem.tbl_2  orders.tbl_1        part.tbl
+DFSMaker           lineitem.tbl_3  orders.tbl_2        region.tbl
+DFSMaker.sh        makeDFS.sh      orders.tbl_3        scpFile.sh
+lineitem.tbl       nation.tbl      partitionsMaker     supplier.tbl
+lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 ```
-
+* Move these partitions to `accordion/data/`
+```
+bash makeDFS.sh
+```
