@@ -331,4 +331,4 @@ $ ctrl ^c
 $ bash stopcluster.sh
 ```
 **4. Notes.**
-* Dependencies. When deploying Accordion to the cloud, a `libs` directory needs to be added to the `accordion\` directory, which needs to hold all the dynamic link libraries that Accordion executable file relies on (these link library files can be collected from the machine where Accordion is compiled).
+* Dependencies. When deploying Accordion to the cloud, a `libs` directory needs to be added to the `accordion\` directory. The `libs` directory needs to hold all the dynamic link libraries that Accordion executable file relies on (these link library files can be collected from the machine where Accordion is compiled).
