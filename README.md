@@ -131,8 +131,8 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 
 **2. Import TPC-H dataSet.**
-* (http://www.tpc.org/tpch/)
-* Get dbgen tools from [](https://www.tpc.org/tpch/).
+
+* Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
 ```
 cd dataSet/
 
