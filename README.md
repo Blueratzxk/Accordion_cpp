@@ -16,19 +16,19 @@ GCC version 11 (or newer).
 
 Accordion has the following third party dependencies
 
-* [@apache arrow](https://github.com/apache/arrow): Data format exchanging between operators and tasks 
+* [@apache arrow](https://github.com/apache/arrow) : Data format exchanging between operators and tasks 
 
-* [@pistache](https://github.com/pistacheio/pistache): Restful server
+* [@pistache](https://github.com/pistacheio/pistache) : Restful HTTP server
 
-* [@restclient-cpp](https://github.com/mrtazz/restclient-cpp) : Restful client
+* [@restclient-cpp](https://github.com/mrtazz/restclient-cpp) : Restful HTTP client
 
-* [@nlnohamn json](https://github.com/nlohmann/json): Json library
+* [@nlnohamn json](https://github.com/nlohmann/json) : Json library
 
-* [@nlnohamn json fifomap](https://github.com/nlohmann/fifo_map): Json library
+* [@nlnohamn json fifomap](https://github.com/nlohmann/fifo_map) : Json library
 
-* [@tbb](https://github.com/oneapi-src/oneTBB): Tbb library
+* [@tbb](https://github.com/oneapi-src/oneTBB) : Tbb library
 
-* [@spdlog](https://github.com/gabime/spdlog): Log library
+* [@spdlog](https://github.com/gabime/spdlog) : Log library
 
 
 # CMake
