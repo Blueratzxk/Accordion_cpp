@@ -1,5 +1,5 @@
 
-<font size=4>Prerequisites</font>
+#**Prerequisites
 
 Make sure you have installed CMake version 3.25 (or newer) on your system. 
 
@@ -9,7 +9,7 @@ Linux Ubuntu version v20.04, v22.04, v24.04.
 
 
 
-<font size=4>Dependencies</font>
+#**Dependencies
 
 Accordion has the following third party dependencies
 
