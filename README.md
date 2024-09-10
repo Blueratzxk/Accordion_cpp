@@ -97,7 +97,7 @@ cp httpConfigIpUpdater ../../../accordion/sbin/
 
 5. Move `Accordion_cpp/accordion/` to the home directory and check the Accordion is able to run.
 ```
-cp -r ../accordion/ ~/
+cp -r Accordion_cpp/accordion/ ~/
 cd ~/accordion/
 bash run.sh
 ```
