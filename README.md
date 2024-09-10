@@ -117,19 +117,19 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 {
     "coordinator":{
-        "Restful_Web_Server_IP":"192.168.226.129",
+        "Restful_Web_Server_IP":"192.168.226.137",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.129",
+        "Arrow_RPC_Server_IP":"192.168.226.137",
         "Arrow_RPC_Server_Port":"9081"
     },
     "local":{
-        "Restful_Web_Server_IP":"192.168.226.129",
+        "Restful_Web_Server_IP":"192.168.226.137",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.129",
+        "Arrow_RPC_Server_IP":"192.168.226.137",
         "Arrow_RPC_Server_Port":"9081"
     },
     "nic":"ens33",
-    "HttpServerAddress":"192.168.226.129:9080"
+    "HttpServerAddress":"192.168.226.137:9080"
 }
 ```
 * Add workers.
@@ -190,3 +190,6 @@ lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 ```
 bash makeDFS.sh
 ```
+
+**3. Run TPC-H Queries.**
+* The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.226.137:9082).
