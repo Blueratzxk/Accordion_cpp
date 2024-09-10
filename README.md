@@ -25,7 +25,15 @@ cd ~/accordion/
 bash run.sh
 
 
-![mahua](mahua-logo.jpg)
+##Dependencies
+Apache Arrow (https://github.com/apache/arrow)
+Apache Pistache (https://github.com/apache/arrow)
+Restclient-cpp (https://github.com/apache/arrow)
+nlnohamn json (https://github.com/apache/arrow)
+nlnohamn json fifomap (https://github.com/apache/arrow)
+tbb (https://github.com/apache/arrow)
+spdlog (https://github.com/apache/arrow)
+
 ##MaHua是什么?
 一个在线编辑markdown文档的编辑器
 
