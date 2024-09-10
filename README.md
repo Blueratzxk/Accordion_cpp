@@ -40,7 +40,7 @@ git clone https://github.com/Blueratzxk/Accordion_cpp
 cd Accordion_cpp/
 ```
 
-2. Installing all the dependencies.
+2. Install all the dependencies.
 
 After installing all the dependent libraries, it is needed to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries.
 ```
