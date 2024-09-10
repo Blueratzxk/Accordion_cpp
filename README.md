@@ -73,7 +73,15 @@ cmake ..
 make -j6
 ```
 
-4.Build Accordion tools.
+4.Copy Accordion execution file to  `Accordion_cpp/accordion/` and mv `Accordion_cpp/accordion/` to the home directory.
+```
+cp Accordion ../accordion/
+cp -r ../accordion/ ~/
+cd ~/accordion/
+bash run.sh
+```
+
+5.Build Accordion tools.
 ```
 cd accordion_tools/DFSMaker
 mkdir build && cd build
@@ -91,13 +99,7 @@ cmake .. && make -j6
 cp httpConfigIpUpdater ../../../accordion/sbin/
 ```
 
-5.Copy Accordion execution file to  `Accordion_cpp/accordion/` and mv `Accordion_cpp/accordion/` to the home directory.
-```
-cp Accordion ../accordion/
-cp -r ../accordion/ ~/
-cd ~/accordion/
-bash run.sh
-```
+
 
 
 
