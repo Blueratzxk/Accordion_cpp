@@ -167,7 +167,7 @@ lineitem,1,4
 ```
 * Generate the `DataFileDicts`. This file contains information about the storage configuration, schema, etc. for each table.
 ```
-bash PartitionsMaker.sh
+$ bash PartitionsMaker.sh
 ```
 
 * Overwrite the DataFileDict file in the accordion directory.
