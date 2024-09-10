@@ -1,21 +1,11 @@
-CMake v3.25 ~ v3.29
-Ubuntu v20.0 ~ v24.0
-gcc11~13
+
+<font size=1>##Prerequisites</font>
+Make sure you have installed CMake version 3.25 (or newer) on your system. 
+Gcc version 11 (or newer)
+Linux Ubuntu version v20.04, v22.04, v24.04.
 
 
-dependencies:
-Apache Arrow
-Apache Pistache
-Restclient-cpp
-nlnohamn json
-nlnohamn json fifomap
-tbb
-spdlog
-
-
-
-
-##Dependencies
+<font size=1>##Dependencies</font>
 
 Accordion has the following third party dependencies
 
