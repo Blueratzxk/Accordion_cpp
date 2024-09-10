@@ -67,7 +67,7 @@ target_link_libraries(
 ```
 
 
-3. Build Accordion and copy the Accordion execution file to `Accordion_cpp/accordion/`.
+**3. Build Accordion and copy the Accordion execution file to `Accordion_cpp/accordion/`.**
 ```
 cd Accordion_cpp/
 mkdir build
@@ -78,7 +78,7 @@ cp Accordion ../accordion/
 ```
 
 
-4. Build Accordion tools and copy them to `Accordion_cpp/accordion/`.
+**4. Build Accordion tools and copy them to `Accordion_cpp/accordion/`.**
 ```
 cd accordion_tools/DFSMaker
 mkdir build && cd build
@@ -97,7 +97,7 @@ cp httpConfigIpUpdater ../../../accordion/sbin/
 ```
 
 
-5. Move `Accordion_cpp/accordion/` to the home directory and check if the Accordion is able to run.
+**5. Move `Accordion_cpp/accordion/` to the home directory and check if the Accordion is able to run.**
 ```
 cp -r Accordion_cpp/accordion/ ~/
 cd ~/accordion/
