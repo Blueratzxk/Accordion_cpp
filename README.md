@@ -34,13 +34,13 @@ Accordion has the following third party dependencies
 
 # Building from source
 
-1. Get Accordion source code from Git Hub.
+**1. Get Accordion source code from Git Hub.**
 ```
 git clone https://github.com/Blueratzxk/Accordion_cpp
 cd Accordion_cpp/
 ```
 
-2. Install all the dependencies.
+**2. Install all the dependencies.**
 
    
 * The source file `fifo_map.hpp` needs to be copied to `json/include/nlohmann/`.
