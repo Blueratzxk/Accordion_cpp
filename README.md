@@ -103,7 +103,7 @@ bash run.sh
 ```
 
 
-
+# Running Accordion stand-alone
 
 
 
