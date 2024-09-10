@@ -4,11 +4,11 @@ The first IQRE SQL query engine.
 
 # Prerequisites
 
-Linux Ubuntu version v20.04, v22.04, v24.04.
+* Linux Ubuntu version v20.04, v22.04, v24.04.
 
-Make sure you have installed CMake version 3.25 (or newer) on your system. 
+* Make sure you have installed CMake version 3.25 (or newer) on your system. 
 
-GCC version 11 (or newer).
+* GCC version 11 (or newer).
 
 
 
@@ -16,19 +16,19 @@ GCC version 11 (or newer).
 
 Accordion has the following third party dependencies
 
-* [@apache arrow](https://github.com/apache/arrow) : Data format exchanging between operators and tasks 
+* [@apache arrow](https://github.com/apache/arrow) : Data format exchanging between operators and tasks.
 
-* [@pistache](https://github.com/pistacheio/pistache) : Restful HTTP server
+* [@pistache](https://github.com/pistacheio/pistache) : Restful HTTP server.
 
-* [@restclient-cpp](https://github.com/mrtazz/restclient-cpp) : Restful HTTP client
+* [@restclient-cpp](https://github.com/mrtazz/restclient-cpp) : Restful HTTP client.
 
-* [@nlnohamn json](https://github.com/nlohmann/json) : Json library
+* [@nlnohamn json](https://github.com/nlohmann/json) : Json library.
 
-* [@nlnohamn json fifomap](https://github.com/nlohmann/fifo_map) : Json library
+* [@nlnohamn json fifomap](https://github.com/nlohmann/fifo_map) : Json library.
 
-* [@tbb](https://github.com/oneapi-src/oneTBB) : Tbb library
+* [@tbb](https://github.com/oneapi-src/oneTBB) : TBB library.
 
-* [@spdlog](https://github.com/gabime/spdlog) : Log library
+* [@spdlog](https://github.com/gabime/spdlog) : Log library.
 
 
 # CMake
