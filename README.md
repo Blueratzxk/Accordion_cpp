@@ -135,7 +135,8 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 * Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
 * Generate TPC-H tables and copy them to `accordion/dataSet/`.
 ```
-$ls dataSet
+$cd dataSet
+$ls
 customer.tbl  makeDFS.sh       PartitionsMaker.sh  scpFile.sh
 DFSMaker      nation.tbl       partsupp.tbl        supplier.tbl
 DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
