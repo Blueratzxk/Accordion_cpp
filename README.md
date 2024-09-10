@@ -12,17 +12,7 @@ nlnohamn json fifomap
 tbb
 spdlog
 
-compile:
-cd Accordion_cpp/
-mkdir build
-cd build
-cmake ..
-make
 
-cp Accordion ../accordion/
-cp ../accordion/ ~/
-cd ~/accordion/
-bash run.sh
 
 
 ##Dependencies
@@ -43,7 +33,19 @@ Accordion has the following third party dependencies
 
 * [@spdlog](https://github.com/gabime/spdlog)
 
+```
+compile:
+cd Accordion_cpp/
+mkdir build
+cd build
+cmake ..
+make
 
+cp Accordion ../accordion/
+cp ../accordion/ ~/
+cd ~/accordion/
+bash run.sh
+```
 ##MaHua是什么?
 一个在线编辑markdown文档的编辑器
 
