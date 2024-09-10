@@ -1,5 +1,8 @@
+# **Accordion**
 
-# **Prerequisites**
+The first IQRE SQL query engine.
+
+# Prerequisites
 
 Make sure you have installed CMake version 3.25 (or newer) on your system. 
 
@@ -9,7 +12,7 @@ Linux Ubuntu version v20.04, v22.04, v24.04.
 
 
 
-# **Dependencies**
+# Dependencies
 
 Accordion has the following third party dependencies
 
