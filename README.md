@@ -36,8 +36,8 @@ Accordion has the following third party dependencies
 
 **1. Get Accordion source code from Git Hub.**
 ```
-git clone https://github.com/Blueratzxk/Accordion_cpp
-cd Accordion_cpp/
+$ git clone https://github.com/Blueratzxk/Accordion_cpp
+$ cd Accordion_cpp/
 ```
 
 **2. Install all the dependencies.**
@@ -69,46 +69,46 @@ target_link_libraries(
 
 **3. Build Accordion and copy the Accordion execution file to `Accordion_cpp/accordion/`.**
 ```
-cd Accordion_cpp/
-mkdir build
-cd build
-cmake ..
-make -j6
-cp Accordion ../accordion/
+$ cd Accordion_cpp/
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j6
+$ cp Accordion ../accordion/
 ```
 
 
 **4. Build Accordion tools and copy them to `Accordion_cpp/accordion/`.**
 ```
-cd accordion_tools/DFSMaker
-mkdir build && cd build
-cmake .. && make -j6
-cp DFSMaker ../../../accordion/dataSet/
+$ cd accordion_tools/DFSMaker
+$ mkdir build && cd build
+$ cmake .. && make -j6
+$ cp DFSMaker ../../../accordion/dataSet/
 
-cd accordion_tools/partitionsMaker
-mkdir build && cd build
-cmake .. && make -j6
-cp partitionsMaker ../../../accordion/dataSet/
+$ cd accordion_tools/partitionsMaker
+$ mkdir build && cd build
+$ cmake .. && make -j6
+$ cp partitionsMaker ../../../accordion/dataSet/
 
-cd accordion_tools/httpConfigIpUpdater
-mkdir build && cd build
-cmake .. && make -j6
-cp httpConfigIpUpdater ../../../accordion/sbin/
+$ cd accordion_tools/httpConfigIpUpdater
+$ mkdir build && cd build
+$ cmake .. && make -j6
+$ cp httpConfigIpUpdater ../../../accordion/sbin/
 ```
 
 
 **5. Move `Accordion_cpp/accordion/` to the home directory and check if the Accordion is able to run.**
 ```
-cp -r Accordion_cpp/accordion/ ~/
-cd ~/accordion/
-bash run.sh
+$ cp -r Accordion_cpp/accordion/ ~/
+$ cd ~/accordion/
+$ bash run.sh
 ```
 
 
 # Running Accordion stand-alone
 
 ```
-cd accordion/
+$ cd accordion/
 ```
 **1. Configure the Accordion.**
 * Modify the `httpconfig.config` file.
@@ -134,11 +134,11 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 * Add workers.
 ```
-echo "192.168.226.137" > sbin/slaves
+$ echo "192.168.226.137" > sbin/slaves
 ```
 * Config the workers' user and password
 ```
-echo -e "root\nroot" >  userpasswd
+$ echo -e "root\nroot" >  userpasswd
 ```
 
 **2. Import TPC-H dataSet.**
@@ -146,8 +146,8 @@ echo -e "root\nroot" >  userpasswd
 * Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
 * Generate TPC-H tables and copy them to `accordion/dataSet/`. Below is an example.
 ```
-$cd dataSet
-$ls
+$ cd dataSet
+$ ls
 customer.tbl  makeDFS.sh       PartitionsMaker.sh  scpFile.sh
 DFSMaker      nation.tbl       partsupp.tbl        supplier.tbl
 DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
@@ -177,8 +177,8 @@ cp DataFileDicts.out ../DataFileDicts
 
 * Generate partitions for each table.
 ```
-$bash DFSMaker.sh
-$ls
+$ bash DFSMaker.sh
+$ ls
 customer.tbl       lineitem.tbl_1  orders.tbl_0        partsupp.tbl
 DataFileDicts.out  lineitem.tbl_2  orders.tbl_1        part.tbl
 DFSMaker           lineitem.tbl_3  orders.tbl_2        region.tbl
@@ -188,14 +188,14 @@ lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 ```
 * Move these partitions to `accordion/data/`
 ```
-bash makeDFS.sh
+$ bash makeDFS.sh
 ```
 
 **3. Run TPC-H Queries.**
 * Run Accordion.
 ```
-cd ..
-bash run.sh
+$ cd ..
+$ bash run.sh
 ```
 * The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.226.137:9082). Here is an example.
  
@@ -216,39 +216,52 @@ bash run.sh
 
 # Deploying Accordion on the cloud (or in a distributed environment)
 
-Suppose there are 5 nodes, `192.168.0.1`, `192.168.0.2`, `192.168.0.3`, `192.168.0.4`, `192.168.0.5`.
+Suppose there are 5 nodes, `192.168.0.121`, `192.168.0.122`, `192.168.0.123`, `192.168.0.124`, `192.168.0.125`.
 
-Where, `192.168.0.1` is coordinator. And `192.168.0.2, 192.168.0.3, 192.168.0.4, and 192.168.0.5` are workers. Inside the workers, `192.168.0.2 and 192.168.0.3` are storage nodes and `192.168.0.4 and 192.168.0.5` are compute nodes.
+Where, `192.168.0.121` is coordinator. And `192.168.0.122, 192.168.0.123, 192.168.0.124, and 192.168.0.125` are workers. Inside the workers, `192.168.0.122 and 192.168.0.123` are storage nodes and `192.168.0.124 and 192.168.0.125` are compute nodes.
 
-**1. Configure the Accordion.**
+**1. Configure a distributed Accordion.**
+* Copy the `accordion/` directory to the `XXX@192.168.0.121:~/` (`accordion/` must be in the home directory).
 * Modify the `httpconfig.config` file.
-Change all IP addresses in the file to the host IP address. Here is an example.
-
+Change all IP addresses in the file to the host IP address.
 ```
 {
     "coordinator":{
-        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_IP":"192.168.0.121",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_IP":"192.168.0.121",
         "Arrow_RPC_Server_Port":"9081"
     },
     "local":{
-        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_IP":"192.168.0.121",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_IP":"192.168.0.121",
         "Arrow_RPC_Server_Port":"9081"
     },
-    "nic":"ens33",
-    "HttpServerAddress":"192.168.226.137:9080"
+    "nic":"eno3",
+    "HttpServerAddress":"192.168.0.121:9080"
 }
 ```
-* Add workers.
+* Add workers. (Does not contain the coordinator IP)
 ```
-echo "192.168.226.137" > sbin/slaves
+$ echo -e "192.168.0.122\n192.168.0.123\n192.168.0.124\n192.168.0.125" > sbin/slaves
 ```
+
 * Config the workers' user and password
 ```
-echo -e "root\nroot" >  userpasswd
+$ echo -e "root\nroot" >  userpasswd
+```
+* Configure SSH passwordless login.
+```
+$ bash sbin/batchSendKey.sh
+```
+* Copy accordion/ to each worker.
+```
+$ bash sbin/deployAccordion.sh
+```
+* Update httpconfig.config for each worker.
+```
+$ bash sbin/updateAllLocalIp.sh
 ```
 
 **2. Import TPC-H dataSet.**
@@ -256,15 +269,15 @@ echo -e "root\nroot" >  userpasswd
 * Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
 * Generate TPC-H tables (`CSV format`) and copy them to `accordion/dataSet/`. Below is an example.
 ```
-$cd dataSet
-$ls
+$ cd dataSet
+$ ls
 customer.tbl  makeDFS.sh       PartitionsMaker.sh  scpFile.sh
 DFSMaker      nation.tbl       partsupp.tbl        supplier.tbl
 DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
 lineitem.tbl  partitionsMaker  region.tbl
 
 ```
-* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. Since we are running Accordion on a single machine, there is only 1 storage node. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
+* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
 ```
 nation,1,1
 supplier,1,1
@@ -272,23 +285,23 @@ region,1,1
 part,1,1
 partsupp,1,1
 customer,1,1
-orders,1,4
-lineitem,1,4
+orders,2,2
+lineitem,2,2
 ```
 * Generate the `DataFileDicts`. This file contains information about the storage configuration, schema, etc. for each table.
 ```
-bash PartitionsMaker.sh
+$ bash PartitionsMaker.sh
 ```
 
 * Overwrite the DataFileDict file in the accordion directory.
 ```
-cp DataFileDicts.out ../DataFileDicts
+$ cp DataFileDicts.out ../DataFileDicts
 ```
 
 * Generate partitions for each table.
 ```
-$bash DFSMaker.sh
-$ls
+$ bash DFSMaker.sh
+$ ls
 customer.tbl       lineitem.tbl_1  orders.tbl_0        partsupp.tbl
 DataFileDicts.out  lineitem.tbl_2  orders.tbl_1        part.tbl
 DFSMaker           lineitem.tbl_3  orders.tbl_2        region.tbl
@@ -296,7 +309,24 @@ DFSMaker.sh        makeDFS.sh      orders.tbl_3        scpFile.sh
 lineitem.tbl       nation.tbl      partitionsMaker     supplier.tbl
 lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 ```
-* Move these partitions to `accordion/data/`
+* Move these partitions to each storage worker.
 ```
-bash makeDFS.sh
+$ bash makeDFS.sh
+```
+
+*Copy the DataFileDicts to each worker.
+```
+$ cd ..
+$ bash copy.sh DataFileDicts
+```
+**3. Run TPC-H Queries on the Accordion cluster.**
+* Start the Accordion cluster.
+```
+$ bash startCluster.sh
+```
+* The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.0.121:9082). Then you can run the queries as mentioned before.
+* Stop the Accordion cluster.
+```
+$ Ctrl ^c
+$ bash StopCluster.sh
 ```
