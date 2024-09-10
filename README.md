@@ -133,9 +133,13 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 **2. Import TPC-H dataSet.**
 
 * Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
+* Generate TPC-H tables and copy them to `accordion/dataSet/`.
 ```
-cd dataSet/
-
+$ls dataSet
+customer.tbl  makeDFS.sh       PartitionsMaker.sh  scpFile.sh
+DFSMaker      nation.tbl       partsupp.tbl        supplier.tbl
+DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
+lineitem.tbl  partitionsMaker  region.tbl
 
 ```
 
