@@ -107,6 +107,27 @@ bash run.sh
 
 # Running Accordion stand-alone
 
+**1.Modify the httpconfig.config file**
+Change all IP addresses in the file to the host IP address.
+```
+{
+    "coordinator":{
+        "Restful_Web_Server_IP":"192.168.226.129",
+        "Restful_Web_Server_Port":"9080",
+        "Arrow_RPC_Server_IP":"192.168.226.129",
+        "Arrow_RPC_Server_Port":"9081"
+    },
+    "local":{
+        "Restful_Web_Server_IP":"192.168.226.129",
+        "Restful_Web_Server_Port":"9080",
+        "Arrow_RPC_Server_IP":"192.168.226.129",
+        "Arrow_RPC_Server_Port":"9081"
+    },
+    "nic":"ens33",
+    "HttpServerAddress":"192.168.226.129:9080"
+}
+```
+
 
 
 
