@@ -33,15 +33,12 @@ Accordion has the following third party dependencies
 
 
 # Building from source
-After installing all the dependent libraries, it is needed to modify the `CMakeLists.txt` to allow CMAKE to find all the header files and dynamic link libraries.
+After installing all the dependent libraries, it is needed to modify the `CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries.
 ```
 include_directories(
-        "/home/zxk/open-codes/json/include/"
+        "/home/zxk/dependency/json/include/"
         "/usr/local/include/"
-        "/usr/local/include/restclient-cpp"
-        "/home/zxk/.local/include"
-        "/home/zxk/open-codes/oneapi-tbb-2021.9.0/include"
-
+        "/home/zxk/dependency/oneapi-tbb-2021.9.0/include"
 )
 
 target_link_libraries(
@@ -54,7 +51,7 @@ target_link_libraries(
         arrow_acero
         arrow_flight
         gandiva
-        /home/zxk/open-codes/oneapi-tbb-2021.9.0/lib/intel64/gcc4.8/libtbb.so
+        libtbb
 )
 ```
 
