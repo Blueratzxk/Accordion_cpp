@@ -107,7 +107,7 @@ bash run.sh
 
 # Running Accordion stand-alone
 
-**1. Modify the `httpconfig.config` file**
+**1. Modify the `httpconfig.config` file.**
 
 Change all IP addresses in the file to the host IP address. Here is an example.
 
@@ -130,6 +130,14 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 }
 ```
 
+**2. Import TPC-H dataSet.**
+* (http://www.tpc.org/tpch/)
+* Get dbgen tools from [](https://www.tpc.org/tpch/).
+```
+cd dataSet/
+
+
+```
 
 
 
