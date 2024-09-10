@@ -211,4 +211,4 @@ bash run.sh
 
 * Click the `Complete` button to get the results of the query execution.
 
-![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI4.png) 
+![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI4.png)  
