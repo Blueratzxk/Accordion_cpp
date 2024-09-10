@@ -39,7 +39,7 @@ cd Accordion_cpp/
 mkdir build
 cd build
 cmake ..
-make
+make -j6
 
 cp Accordion ../accordion/
 cp ../accordion/ ~/
