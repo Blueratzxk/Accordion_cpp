@@ -161,5 +161,5 @@ bash PartitionsMaker.sh
 
 * Overwrite the DataFileDict file in the accordion directory.
 ```
-cp DataFileDict.out ../DataFileDict
+cp DataFileDicts.out ../DataFileDicts
 ```
