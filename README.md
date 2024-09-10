@@ -201,4 +201,4 @@ bash run.sh
  
 ![image](https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI1.png?raw=true)
 
-<img src="https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI1.png?raw=true" width="50%">
+![image](<img src="https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI1.png?raw=true" width="50%")
