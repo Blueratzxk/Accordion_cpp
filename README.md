@@ -108,7 +108,7 @@ $ bash run.sh
 # Running Accordion stand-alone
  
 ```
-$ cd accordion/
+$ cd ~/accordion/
 ```
 **1. Configure the Accordion.**
 * Modify the `httpconfig.config` file.
