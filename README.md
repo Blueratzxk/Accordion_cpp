@@ -27,19 +27,21 @@ bash run.sh
 
 ##Dependencies
 
-* [@ApacheArrow](https://github.com/apache/arrow)
+Accordion has the following third party dependencies
 
-* [@Apache Pistache](https://github.com/apache/arrow)
+* [@apache arrow](https://github.com/apache/arrow)
 
-* [@Restclient-cpp](https://github.com/apache/arrow)
+* [@pistache](https://github.com/pistacheio/pistache)
 
-* [@nlnohamn json](https://github.com/apache/arrow)
+* [@restclient-cpp](https://github.com/apache/arrow)
 
-* [@nlnohamn json fifomap](https://github.com/apache/arrow)
+* [@nlnohamn json](https://github.com/nlohmann/json)
 
-* [@tbb](https://github.com/apache/arrow)
+* [@nlnohamn json fifomap](https://github.com/nlohmann/fifo_map)
 
-* [@spdlog](https://github.com/apache/arrow)
+* [@tbb](https://github.com/oneapi-src/oneTBB)
+
+* [@spdlog](https://github.com/gabime/spdlog)
 
 
 ##MaHua是什么?
