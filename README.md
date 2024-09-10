@@ -30,8 +30,9 @@ Accordion has the following third party dependencies
 
 * [@spdlog](https://github.com/gabime/spdlog)
 
+
+# CMake
 ```
-compile:
 cd Accordion_cpp/
 mkdir build
 cd build
