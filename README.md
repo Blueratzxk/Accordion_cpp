@@ -40,7 +40,7 @@ cmake ..
 make -j6
 
 cp Accordion ../accordion/
-cp ../accordion/ ~/
+cp -r ../accordion/ ~/
 cd ~/accordion/
 bash run.sh
 ```
