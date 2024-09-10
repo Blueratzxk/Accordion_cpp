@@ -207,7 +207,7 @@ $ bash run.sh
 
 * Click the `Controller` button to enter the query control panel, you can adjust the query stage parallelism and task parallelism.
 
-![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI3.png) 
+![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI31.png) 
 
 * Click the `Complete` button to get the results of the query execution. 
 
