@@ -133,7 +133,7 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 **2. Import TPC-H dataSet.**
 
 * Get dbgen tools from [TPC-H](https://www.tpc.org/tpch/).
-* Generate TPC-H tables and copy them to `accordion/dataSet/`.
+* Generate TPC-H tables and copy them to `accordion/dataSet/`. Below is an example.
 ```
 $cd dataSet
 $ls
@@ -143,7 +143,17 @@ DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
 lineitem.tbl  partitionsMaker  region.tbl
 
 ```
-
+* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. Since we are running Accordion on a single machine, there is only 1 storage node. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
+```
+nation,1,1
+supplier,1,1
+region,1,1
+part,1,1
+partsupp,1,1
+customer,1,1
+orders,1,4
+lineitem,1,4
+```
 
 
 
