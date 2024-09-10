@@ -2,8 +2,11 @@
 <font size=4>#Prerequisites</font>
 
 Make sure you have installed CMake version 3.25 (or newer) on your system. 
+
 Gcc version 11 (or newer)
+
 Linux Ubuntu version v20.04, v22.04, v24.04.
+
 
 
 <font size=4>#Dependencies</font>
