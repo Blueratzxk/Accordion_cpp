@@ -191,7 +191,7 @@ lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 $ bash makeDFS.sh
 ```
 
-**3. Run TPC-H Queries.**
+**3. Run TPC-H queries.**
 * Run Accordion.
 ```
 $ cd ..
@@ -319,7 +319,7 @@ $ bash makeDFS.sh
 $ cd ..
 $ bash copy.sh DataFileDicts
 ```
-**3. Run TPC-H Queries on the Accordion cluster.**
+**3. Run TPC-H queries on the Accordion cluster.**
 * Start the Accordion cluster.
 ```
 $ bash startcluster.sh
