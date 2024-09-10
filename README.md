@@ -192,5 +192,11 @@ bash makeDFS.sh
 ```
 
 **3. Run TPC-H Queries.**
-* The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.226.137:9082).
-  ![image](https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI1.png?raw=true)
+* Run Accordion.
+```
+cd ..
+bash run.sh
+```
+* The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.226.137:9082). Here is an example.
+ 
+![image](https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI1.png?raw=true)
