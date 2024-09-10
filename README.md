@@ -7,7 +7,7 @@ The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype vers
 * Linux Ubuntu version v20.04, v22.04, v24.04.
 
 * Make sure you have installed CMake version 3.25 (or newer) on your system. 
-
+ 
 * GCC version 11 (or newer).
 
 
