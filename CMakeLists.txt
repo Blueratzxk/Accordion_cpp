@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(OLVP)
+project(Accordion)
 
 set(CMAKE_CXX_STANDARD 20)
 SET(CMAKE_CXX_FLAGS "-fno-stack-protector")
@@ -14,7 +14,7 @@ if(CCACHE_FOUND)
 endif(CCACHE_FOUND)
 
 
-add_executable(OLVP main.cpp
+add_executable(Accordion main.cpp
         DataSource/dataLoader.hpp
         DataSource/DataFileDicts.hpp
         common.h
@@ -336,7 +336,7 @@ include_directories(
 )
 
 target_link_libraries(
-        OLVP
+        Accordion
         pistache
         /usr/local/lib64/libpistache.so
         /usr/local/lib/librestclient-cpp.so
