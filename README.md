@@ -106,7 +106,7 @@ $ bash run.sh
 
 
 # Running Accordion stand-alone
-
+ 
 ```
 $ cd accordion/
 ```
