@@ -214,7 +214,7 @@ $ bash run.sh
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI4.png)  
 
 
-# Deploying Accordion in the cloud (or in a distributed environment)
+# Deploying Accordion on the cloud (or in a distributed environment)
 
 Suppose there are 5 nodes, `192.168.0.121`, `192.168.0.122`, `192.168.0.123`, `192.168.0.124`, `192.168.0.125`.
 
