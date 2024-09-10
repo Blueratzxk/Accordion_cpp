@@ -201,4 +201,6 @@ bash run.sh
  
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI1.png)
 
-<img src="https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI1.png" width="50%"\>
+* Enter "run Q1S" in the left input box to run TPC-H Q1. There are 12 TPC-H queries in Accordion (Q1 ~ Q12).
+
+ 
