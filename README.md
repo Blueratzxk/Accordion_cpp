@@ -31,7 +31,7 @@ Accordion has the following third party dependencies
 * [@spdlog](https://github.com/gabime/spdlog) : Log library.
 
 
-# Build from source
+# Building from source
 ```
 cd Accordion_cpp/
 mkdir build
