@@ -322,11 +322,11 @@ $ bash copy.sh DataFileDicts
 **3. Run TPC-H Queries on the Accordion cluster.**
 * Start the Accordion cluster.
 ```
-$ bash startCluster.sh
+$ bash startcluster.sh
 ```
 * The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.0.121:9082). Then you can run the queries as mentioned before.
 * Stop the Accordion cluster.
 ```
 $ Ctrl ^c
-$ bash StopCluster.sh
+$ bash stopcluster.sh
 ```
