@@ -43,7 +43,7 @@ cd Accordion_cpp/
 2. Install all the dependencies.
 
    
-* The source file `fifo_map.hpp` is needed to copy to the `json/include/nlohmann`.
+* The source file `fifo_map.hpp` is needed to copy to `json/include/nlohmann`.
 * After installing all the dependent libraries, it is needed to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries (according to the locations of installed dependencies). Here is an example.
 ```
 include_directories(
