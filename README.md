@@ -314,7 +314,7 @@ lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 $ bash makeDFS.sh
 ```
 
-*Copy the DataFileDicts to each worker.
+* Copy the `DataFileDicts` to each worker.
 ```
 $ cd ..
 $ bash copy.sh DataFileDicts
