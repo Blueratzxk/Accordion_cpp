@@ -1,5 +1,5 @@
-CMake v3.25~v3.29
-Ubuntu v20.0~v24.0
+CMake v3.25 ~ v3.29
+Ubuntu v20.0 ~ v24.0
 gcc11~13
 
 
