@@ -332,3 +332,4 @@ $ bash stopcluster.sh
 ```
 **4. Notes.**
 * Dependencies. When deploying Accordion to the cloud, a `libs` directory needs to be added to the `accordion\` directory. The `libs` directory needs to hold all the dynamic link libraries that Accordion executable file relies on (these link library files can be collected from the machine where Accordion is compiled).
+* Script. You can run a query by modifying a script file in the `accordion\` directory. You can trigger script execution by typing the 's' character in Accordion's command terminal (not the Web UI). You can also enter the 'h' character to view and use some of Accordion's commands.
