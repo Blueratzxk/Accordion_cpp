@@ -33,7 +33,7 @@ Accordion has the following third party dependencies
 
 * [@pistache](https://github.com/pistacheio/pistache)
 
-* [@restclient-cpp](https://github.com/apache/arrow)
+* [@restclient-cpp](https://github.com/mrtazz/restclient-cpp)
 
 * [@nlnohamn json](https://github.com/nlohmann/json)
 
