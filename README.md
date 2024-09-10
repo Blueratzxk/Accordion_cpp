@@ -134,7 +134,7 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 * Add workers.
 ```
-echo "192.168.226.129" > sbin/slaves
+echo "192.168.226.137" > sbin/slaves
 ```
 * Config the workers' user and password
 ```
