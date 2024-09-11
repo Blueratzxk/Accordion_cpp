@@ -163,7 +163,10 @@ public:
 
             if(duration_millsecond > bufferTuneCircle)
             {
-                this->pageNumsLimit = this->traffic;
+                if(this->traffic > 0)
+                    this->pageNumsLimit = this->traffic;
+                else
+                    this->pageNumsLimit = 1;
 
                 if(this->traffic < this->pageNumsLimit)
                     if(this->taskContext != NULL)

@@ -138,6 +138,7 @@ public:
                 this->taskContext->updateRemainingBufferTupleCount(-re->getElementsCount());
         }
 
+        //spdlog::info("All:"+ to_string(this->oneBuffer->getPageNums())+"Request:"+to_string(pageNums)+" Get:"+ to_string(result.size()));
 
         tuneBufferCapacity("consumer");
         this->traffic += result.size();
@@ -163,7 +164,10 @@ public:
 
             if(duration_millsecond > bufferTuneCircle)
             {
-                this->pageNumsLimit = this->traffic;
+                if(this->traffic > 0)
+                    this->pageNumsLimit = this->traffic;
+                else
+                    this->pageNumsLimit = 1;
 
                 if(this->traffic < this->pageNumsLimit)
                     if(this->taskContext != NULL)

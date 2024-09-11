@@ -101,6 +101,7 @@ public:
             this->event->notify();
             result = this->delegate->getPages(bufferId, token,pageNums);
             recordOutputTupleInfos(&result);
+
         }
 
         return result;
