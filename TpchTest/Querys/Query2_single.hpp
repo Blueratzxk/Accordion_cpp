@@ -5,6 +5,7 @@
 #ifndef OLVP_QUERY2_SINGLE_HPP
 #define OLVP_QUERY2_SINGLE_HPP
 
+
 #include "../../Query/RegQuery.h"
 
 /*
@@ -96,7 +97,7 @@ public:
 
 
         Column *r_name = new Column("0","r_name","string");
-        StringLiteral *rNameLiteral = new StringLiteral("0","ASIA");
+        StringLiteral *rNameLiteral = new StringLiteral("0","AMERICA");
         FunctionCall *rnameEqual = new FunctionCall("0","equal","bool");
         rnameEqual->addChilds({r_name,rNameLiteral});
 
@@ -171,7 +172,7 @@ public:
         //----------------------------------join partsupp------------------------------------------------------------------------//
 
 
-        TableScanNode *tableScanPartsupp = createTableScanPartSuppToProbe();
+        PlanNode *tableScanPartsupp = createTableScanPartSuppToProbe();
 
 
 
@@ -211,7 +212,7 @@ public:
 
 
         Column *r_name = new Column("0","r_name","string");
-        StringLiteral *rNameLiteral = new StringLiteral("0","ASIA");
+        StringLiteral *rNameLiteral = new StringLiteral("0","AMERICA");
         FunctionCall *rnameEqual = new FunctionCall("0","equal","bool");
         rnameEqual->addChilds({r_name,rNameLiteral});
 
@@ -292,12 +293,12 @@ public:
 
 
         Column *p_type = new Column("0","p_type","string");
-        StringLiteral *pTypeLiteral = new StringLiteral("0","%STEEL");
+        StringLiteral *pTypeLiteral = new StringLiteral("0","%MEDIUM%");
         FunctionCall *pTypelike = new FunctionCall("0","like","bool");
         pTypelike->addChilds({p_type,pTypeLiteral});
 
         Column *p_size = new Column("0","p_size","int64");
-        Int64Literal *pSizeLiteral = new Int64Literal("0","17");
+        Int64Literal *pSizeLiteral = new Int64Literal("0","30");
         FunctionCall *pSizeEqual = new FunctionCall("0","equal","bool");
         pSizeEqual->addChilds({p_size,pSizeLiteral});
 
@@ -328,7 +329,7 @@ public:
         //----------------------------------join partsupp------------------------------------------------------------------------//
 
 
-        TableScanNode *tableScanPartsupp = this->createTableScanPartSuppToProbe();
+        PlanNode *tableScanPartsupp = this->createTableScanPartSuppToProbe();
 
 
 
@@ -427,7 +428,7 @@ public:
         buildLocalExchange->addSource(partialAgg);
 
         shared_ptr<PartitioningScheme> schemeBuild1 = make_shared<PartitioningScheme>(Partitioning::create(SystemPartitioningHandle::get("SINGLE_DISTRIBUTION"),{}));
-        ExchangeNode *buildExchange1 = new ExchangeNode("finalAggExchange",ExchangeNode::GATHER,schemeBuild1,partialAgg);
+        ExchangeNode *buildExchange1 = new ExchangeNode("finalAggExchange",ExchangeNode::GATHER,schemeBuild1,buildLocalExchange);
 
         FinalAggregationNode *finalAgg = createFinalAgg();
         finalAgg->addSource(buildExchange1);
@@ -561,15 +562,12 @@ public:
         return tableScanPart;
 
     }
-    TableScanNode *createTableScanPartSuppToProbe()
+    PlanNode *createTableScanPartSuppToProbe()
     {
         TableScanNode *tableScanPartsupp = new TableScanNode(UUID::create_uuid(),TableScanDescriptor("tpch_test","tpch_1","partsupp"));
 
-      //  shared_ptr<PartitioningScheme> schemeProbe = make_shared<PartitioningScheme>(Partitioning::create(SystemPartitioningHandle::get("SCALED_SIMPLE_DISTRIBUTION_BUF"),{}));
-     //   ExchangeNode *probeExchange = new ExchangeNode("probeExchange1",ExchangeNode::REPARTITION,schemeProbe,tableScanPartsupp);
-
-        LocalExchangeNode *probeExchange = new LocalExchangeNode("probeExchange1");
-        probeExchange->addSource(tableScanPartsupp);
+        shared_ptr<PartitioningScheme> schemeProbe = make_shared<PartitioningScheme>(Partitioning::create(SystemPartitioningHandle::get("SCALED_SIMPLE_DISTRIBUTION_BUF"),{}));
+        ExchangeNode *probeExchange = new ExchangeNode("probeExchange1",ExchangeNode::REPARTITION,schemeProbe,tableScanPartsupp);
         return tableScanPartsupp;
 
     }

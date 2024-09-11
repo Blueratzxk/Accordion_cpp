@@ -477,7 +477,7 @@ public:
         probeLocalExchange->addSource(fiveTJ);
 
 
-        allJoin->addProbe(probeLocalExchange);
+        allJoin->addProbe(fiveTJ);
         allJoin->addBuild(buildExchange2);
 
         return allJoin;

@@ -15,6 +15,7 @@
 #include "../TpchTest/Querys/Query2_hash.hpp"
 #include "../TpchTest/Querys/Query2_hash_NL.hpp"
 #include "../TpchTest/Querys/Query2_single.hpp"
+
 #include "../TpchTest/Querys/Query3.hpp"
 #include "../TpchTest/Querys/Query3_NL.hpp"
 #include "../TpchTest/Querys/Query3_hash.hpp"
@@ -121,27 +122,28 @@ public:
 
     void regQuerys()
     {
-        regQueryList["Q1"] = make_shared<Query1>();
-        regQueryList["Q1NL"] = make_shared<Query1_NL>();
+        regQueryList["Q1L"] = make_shared<Query1>();
+        regQueryList["Q1"] = make_shared<Query1_NL>();
         regQueryList["Q1S"] = make_shared<Query1_single>();
         regQueryList["Q1SS"] = make_shared<Query1_ssingle>();
 
-        regQueryList["Q2"] = make_shared<Query2>();
-        regQueryList["Q2NL"] = make_shared<Query2_NL>();
+        regQueryList["Q2L"] = make_shared<Query2>();
+        regQueryList["Q2"] = make_shared<Query2_NL>();
         regQueryList["Q2_h"] = make_shared<Query2_hash>();
         regQueryList["Q2_h_NL"] = make_shared<Query2_hash_NL>();
         regQueryList["Q2_ss"] = make_shared<Query2_ShuffleStage>();
         regQueryList["Q2S"] = make_shared<Query2_single>();
 
-        regQueryList["Q3"] = make_shared<Query3>();
-        regQueryList["Q3NL"] = make_shared<Query3_NL>();
+
+        regQueryList["Q3L"] = make_shared<Query3>();
+        regQueryList["Q3"] = make_shared<Query3_NL>();
         regQueryList["Q3_h"] = make_shared<Query3_hash>();
         regQueryList["Q3_h_NL"] = make_shared<Query3_hash_NL>();
         regQueryList["Q3_ss"] = make_shared<Query3_ShuffleStage>();
         regQueryList["Q3S"] = make_shared<Query3_single>();
 
-        regQueryList["Q4"] = make_shared<Query4>();
-        regQueryList["Q4NL"] = make_shared<Query4_NL>();
+        regQueryList["Q4L"] = make_shared<Query4>();
+        regQueryList["Q4"] = make_shared<Query4_NL>();
         regQueryList["Q4NL_HB"] = make_shared<Query4_NL_MulHashBuild>();
 
         regQueryList["Q4_h"] = make_shared<Query4_hash>();
@@ -149,53 +151,53 @@ public:
         regQueryList["Q4_ss"] = make_shared<Query4_ShuffleStage>();
         regQueryList["Q4S"] = make_shared<Query4_single>();
 
-        regQueryList["Q5"] = make_shared<Query5>();
-        regQueryList["Q5NL"] = make_shared<Query5_NL>();
+        regQueryList["Q5L"] = make_shared<Query5>();
+        regQueryList["Q5"] = make_shared<Query5_NL>();
         regQueryList["Q5_h"] = make_shared<Query5_hash>();
         regQueryList["Q5_h_NL"] = make_shared<Query5_hash_NL>();
         regQueryList["Q5_ss"] = make_shared<Query5_ShuffleStage>();
         regQueryList["Q5S"] = make_shared<Query5_single>();
 
 
-        regQueryList["Q6"] = make_shared<Query6>();
-        regQueryList["Q6NL"] = make_shared<Query6_NL>();
+        regQueryList["Q6L"] = make_shared<Query6>();
+        regQueryList["Q6"] = make_shared<Query6_NL>();
         regQueryList["Q6S"] = make_shared<Query6_single>();
 
-        regQueryList["Q7"] = make_shared<Query7>();
-        regQueryList["Q7NL"] = make_shared<Query7_NL>();
+        regQueryList["Q7L"] = make_shared<Query7>();
+        regQueryList["Q7"] = make_shared<Query7_NL>();
         regQueryList["Q7_h"] = make_shared<Query7_hash>();
         regQueryList["Q7_h_NL"] = make_shared<Query7_hash_NL>();
         regQueryList["Q7_ss"] = make_shared<Query7_ShuffleStage>();
         regQueryList["Q7S"] = make_shared<Query7_single>();
 
-        regQueryList["Q8"] = make_shared<Query8>();
-        regQueryList["Q8NL"] = make_shared<Query8_NL>();
+        regQueryList["Q8L"] = make_shared<Query8>();
+        regQueryList["Q8"] = make_shared<Query8_NL>();
         regQueryList["Q8_h"] = make_shared<Query8_hash>();
         regQueryList["Q8_h_NL"] = make_shared<Query8_hash_NL>();
         regQueryList["Q8_ss"] = make_shared<Query8_ShuffleStage>();
         regQueryList["Q8S"] = make_shared<Query8_single>();
 
-        regQueryList["Q9"] = make_shared<Query9>();
+        regQueryList["Q9L"] = make_shared<Query9>();
         regQueryList["Q9NL"] = make_shared<Query9_NL>();
         regQueryList["Q9S"] = make_shared<Query9_single>();
 
-        regQueryList["Q10"] = make_shared<Query10>();
-        regQueryList["Q10NL"] = make_shared<Query10_NL>();
+        regQueryList["Q10L"] = make_shared<Query10>();
+        regQueryList["Q10"] = make_shared<Query10_NL>();
         regQueryList["Q102"] = make_shared<Query10_2>();
         regQueryList["Q10_h"] = make_shared<Query10_hash>();
         regQueryList["Q10_h_NL"] = make_shared<Query10_hash_NL>();
         regQueryList["Q10_ss"] = make_shared<Query10_ShuffleStage>();
         regQueryList["Q10S"] = make_shared<Query10_single>();
 
-        regQueryList["Q11"] = make_shared<Query11>();
-        regQueryList["Q11NL"] = make_shared<Query11_NL>();
+        regQueryList["Q11L"] = make_shared<Query11>();
+        regQueryList["Q11"] = make_shared<Query11_NL>();
         regQueryList["Q11_h"] = make_shared<Query11_hash>();
         regQueryList["Q11_h_NL"] = make_shared<Query11_hash_NL>();
         regQueryList["Q11_ss"] = make_shared<Query11_ShuffleStage>();
         regQueryList["Q11S"] = make_shared<Query11_single>();
 
-        regQueryList["Q12"] = make_shared<Query12>();
-        regQueryList["Q12NL"] = make_shared<Query12_NL>();
+        regQueryList["Q12L"] = make_shared<Query12>();
+        regQueryList["Q12"] = make_shared<Query12_NL>();
         regQueryList["Q12_h"] = make_shared<Query12_hash>();
         regQueryList["Q12_h_NL"] = make_shared<Query12_hash_NL>();
         regQueryList["Q12_ss"] = make_shared<Query12_ShuffleStage>();
