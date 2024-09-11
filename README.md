@@ -117,15 +117,15 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 {
     "coordinator":{
-        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_IP":"localhost",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_IP":"localhost",
         "Arrow_RPC_Server_Port":"9081"
     },
     "local":{
-        "Restful_Web_Server_IP":"192.168.226.137",
+        "Restful_Web_Server_IP":"localhost",
         "Restful_Web_Server_Port":"9080",
-        "Arrow_RPC_Server_IP":"192.168.226.137",
+        "Arrow_RPC_Server_IP":"localhost",
         "Arrow_RPC_Server_Port":"9081"
     },
     "nic":"ens33",
@@ -134,7 +134,7 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 * Add workers.
 ```
-$ echo "192.168.226.137" > sbin/slaves
+$ echo "localhost" > sbin/slaves
 ```
 * Configure the workers' user and password
 ```
