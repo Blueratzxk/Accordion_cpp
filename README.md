@@ -201,7 +201,7 @@ $ bash run.sh
  
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI1.png)
 
-* Enter "run Q1S" in the left input box to run TPC-H Q1. There are 12 TPC-H queries in Accordion (Q1 ~ Q12).
+* Enter "run Q1S" in the left input box to run TPC-H Q1 (stand-alone version). There are 12 TPC-H queries in Accordion (Q1S ~ Q12S).
 
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI2.png)
 
@@ -325,6 +325,7 @@ $ bash copy.sh DataFileDicts
 $ bash startcluster.sh
 ```
 * The WEB UI of Accordion can be accessed through IP:9082 (for example, 192.168.0.121:9082). Then you can run the queries as mentioned before.
+* Enter "run Q1" in the left input box to run TPC-H Q1 (distributed version). There are 12 TPC-H queries in Accordion (Q1 ~ Q12).
 * Stop the Accordion cluster.
 ```
 $ ctrl ^c
