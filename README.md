@@ -154,7 +154,7 @@ DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
 lineitem.tbl  partitionsMaker  region.tbl
 
 ```
-* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. Since we are running Accordion on a single machine, there is only 1 storage node. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
+* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes (how many nodes we want to distribute this table to store), and the third column is the number of table partitions contained in each storage node. Below is an example. Since we are running Accordion on a single machine, there is only 1 storage node. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
 ```
 nation,1,1
 supplier,1,1
@@ -277,7 +277,7 @@ DFSMaker.sh   orders.tbl       part.tbl            tablePartitions.txt
 lineitem.tbl  partitionsMaker  region.tbl
 
 ```
-* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes, and the third column is the number of table slices contained in each storage node. Below is an example. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
+* Modify the `tablePartitions.txt`. The first column is the table name, the second column is the number of storage nodes (how many nodes we want to distribute this table to store), and the third column is the number of table partitions contained in each storage node. Below is an example. This configuration slices the ORDERS table and LINEITEM table horizontally into 4 partitions.
 ```
 nation,1,1
 supplier,1,1
@@ -309,7 +309,7 @@ DFSMaker.sh        makeDFS.sh      orders.tbl_3        scpFile.sh
 lineitem.tbl       nation.tbl      partitionsMaker     supplier.tbl
 lineitem.tbl_0     orders.tbl      PartitionsMaker.sh  tablePartitions.txt
 ```
-* Move these partitions to each storage worker.
+* Distribute these partitions to each storage worker.
 ```
 $ bash makeDFS.sh
 ```
