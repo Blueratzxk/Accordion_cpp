@@ -136,7 +136,7 @@ Change all IP addresses in the file to the host IP address. Here is an example.
 ```
 $ echo "192.168.226.137" > sbin/slaves
 ```
-* Config the workers' user and password
+* Configure the workers' user and password
 ```
 $ echo -e "root\nroot" >  userpasswd
 ```
@@ -247,7 +247,7 @@ Change all IP addresses in the file to the host IP address.
 $ echo -e "192.168.0.122\n192.168.0.123\n192.168.0.124\n192.168.0.125" > sbin/slaves
 ```
 
-* Config the workers' user and password
+* Configure the workers' user and password
 ```
 $ echo -e "root\nroot" >  userpasswd
 ```
