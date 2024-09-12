@@ -5,7 +5,7 @@ The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 * Accordion can tune the parallelism of a query at any time during its execution, and the tuning process will not affect the query execution.
 * Its what-if service facilitates parallelism tuning and can predict DOP-tuned remaining query execution times for users. 
 * Accordion can be used to solve the problem of cost-performance tradeoffs when analyzing data on the cloud. 
-* It also can be used to build a full-serverless cloud database or data warehouse.
+* It also can be used to build a fully-serverless cloud-native database or data warehouse.
 
 **Here is a demo:**
 
