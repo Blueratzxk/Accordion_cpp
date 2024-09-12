@@ -53,7 +53,7 @@ $ cd Accordion_cpp/
 
    
 * The source file `fifo_map.hpp` needs to be copied to `json/include/nlohmann/`.
-* After installing all the dependent libraries, it is needed to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries (according to the locations of installed dependencies). Here is an example.
+* After installing all the dependent libraries, it is necessary to modify the `Accordion_cpp/CMakeLists.txt` to allow CMake to find all the header files and dynamic link libraries (according to the locations of installed dependencies). Here is an example.
 ```
 include_directories(
         "/home/zxk/dependency/json/include/"
@@ -106,7 +106,7 @@ $ cp httpConfigIpUpdater ../../../accordion/sbin/
 ```
 
 
-**5. Move `Accordion_cpp/accordion/` to the home directory and check if the Accordion is able to run.**
+**5. Move `Accordion_cpp/accordion/` to the home directory and check if the Accordion can run.**
 ```
 $ cp -r Accordion_cpp/accordion/ ~/
 $ cd ~/accordion/
@@ -227,7 +227,7 @@ $ bash run.sh
 
 Suppose there are 5 nodes, `192.168.0.121`, `192.168.0.122`, `192.168.0.123`, `192.168.0.124`, `192.168.0.125`.
 
-Where, `192.168.0.121` is coordinator. And `192.168.0.122, 192.168.0.123, 192.168.0.124, and 192.168.0.125` are workers. Inside the workers, `192.168.0.122 and 192.168.0.123` are storage nodes and `192.168.0.124 and 192.168.0.125` are compute nodes.
+Where `192.168.0.121` is the coordinator. And `192.168.0.122, 192.168.0.123, 192.168.0.124, and 192.168.0.125` are workers. Inside the workers, `192.168.0.122 and 192.168.0.123` are storage nodes, and `192.168.0.124 and 192.168.0.125` are compute nodes.
 
 **1. Configure a distributed Accordion.**
 * Copy the `accordion/` directory to the `XXX@192.168.0.121:~/` (The `accordion/` must be copied to a home directory).
@@ -341,7 +341,7 @@ $ ctrl ^c
 $ bash stopcluster.sh
 ```
 **4. Notes.**
-* Dependencies. When deploying Accordion to the cloud, a `libs` directory needs to be added to the `accordion/` directory. The `libs` directory needs to hold all the dynamic link libraries that Accordion executable file relies on (these link library files can be collected from the machine where Accordion is compiled).
+* Dependencies. When deploying Accordion to the cloud, a `libs` directory needs to be added to the `accordion/` directory. The `libs` directory needs to hold all the dynamic link libraries that the Accordion executable file relies on (these link library files can be collected from the machine where Accordion is compiled).
 * Script. You can run a query by modifying a script file in the `accordion/` directory. You can trigger script execution by typing the 's' character in Accordion's command terminal (not the Web UI). You can also enter the 'h' character to view and use some of Accordion's commands. Queries run via script or web UI have their runtime information collected in the `accordion/monitorData/` directory.
 * Execution Configuration. The `accordion/execution.config` file is used to configure the initial intra-task or intra-stage parallelism of the query execution.
 
