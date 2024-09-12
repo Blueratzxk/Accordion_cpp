@@ -2,6 +2,8 @@
 
 The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
+Accordion can tune the parallelism of a query at any time during its execution, and the tuning process will not affect the query execution. Accordion's what-if service facilitates parallelism tuning and can predict DOP-tuned remaining query execution times for users.
+
 **Demo:**
 
 ![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI.gif)  
