@@ -337,5 +337,4 @@ $ bash stopcluster.sh
 * Execution Configuration. The `accordion/execution.config` file is used to configure the initial intra-task or intra-stage parallelism of the query execution.
 
 
-![image](https://github.com/Blueratzxk/Accordion_cpp/blob/master/imgs/UI.mp4)
 
