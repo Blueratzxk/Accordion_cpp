@@ -336,5 +336,5 @@ $ bash stopcluster.sh
 * Script. You can run a query by modifying a script file in the `accordion/` directory. You can trigger script execution by typing the 's' character in Accordion's command terminal (not the Web UI). You can also enter the 'h' character to view and use some of Accordion's commands. Queries run via script or web UI have their runtime information collected in the `accordion/monitorData/` directory.
 * Execution Configuration. The `accordion/execution.config` file is used to configure the initial intra-task or intra-stage parallelism of the query execution.
 
-
+![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI.gif)  
 
