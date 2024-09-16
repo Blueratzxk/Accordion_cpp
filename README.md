@@ -1,5 +1,5 @@
 # Accordion 
-##### [Cloud-native data analysis in accordance with your mind]
+## [Cloud-native data analysis in accordance with your mind]
 
 The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
