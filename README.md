@@ -1,4 +1,4 @@
-# Accordion
+# Accordion [Cloud-native data analysis in accordance with your mind]
 
 The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
@@ -23,7 +23,7 @@ The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
 # Dependencies
 
-Accordion has the following third party dependencies
+Accordion has the following third-party dependencies
 
 * [@apache arrow](https://github.com/apache/arrow) : Data format exchanging between operators and tasks.
 
