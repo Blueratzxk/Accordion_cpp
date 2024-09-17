@@ -9,7 +9,7 @@ The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
 **Here is a demo:**
 
-![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UI.gif)  
+![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/UII.gif)  
 
 # Prerequisites
 
