@@ -1,4 +1,4 @@
-![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/icon.png)  
+
 
 <img src="https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/icon.png" width="200" />
 # Accordion: cloud-native data analysis in accordance with your mind
