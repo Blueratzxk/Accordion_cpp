@@ -1,4 +1,5 @@
-# Accordion: cloud-native data analysis in accordance with your mind
+![image](https://raw.githubusercontent.com/Blueratzxk/Accordion_cpp/master/imgs/icon.png)  
+# Accordion: cloud-native data analysis in accordance with your mindicon
 
 The first IQRE (Intra-Query Runtime Elasticity) SQL query engine (prototype).
 
